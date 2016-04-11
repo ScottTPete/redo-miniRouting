@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="miniRouteApp">
+<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Mini Route</title>
+				<link rel="stylesheet" href="">
+</head>
+
+<body>
+	
+	
+	<div class="menu">
+		<ul>
+			<li><a ui-sref="home">Home</a></li>
+			<li>
+				Products
+				<ul>
+					<li><a ui-sref="products({id: 'shoes'})">Shoes</a></li>
+					<li><a ui-sref="products({id: 'socks'})">Socks</a></li>
+				</ul>
+			</li>
+			<li><a ui-sref="settings"> Settings </a></li>
+		</ul>
+	</div>
+
+	<div class="view-container">
+		<div ui-view></div>
+	</div>
+	
+	<!--//angular || angular ui-router//-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	
+	<!--//app//-->
+	<script src="js/app.js"></script>
+
+	<!--//home//-->
+	<script src="js/home/homeCtrl.js"></script>
+	
+	<!--//products//-->
+	<script src="js/products/productsCtrl.js"></script>
+	<script src="js/products/productsService.js"></script>
+	
+	<!--//settings//-->
+	<script src="js/settings/settingsCtrl.js"></script>
+</body>
+</html>
